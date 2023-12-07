@@ -1,0 +1,44 @@
+/* Varibles */
+:root {
+--primaryColor:#f15025;
+--mainBlack: #222;
+--mainWhite : #fff;
+--offWhite: #f7f7f7;
+--darkGrey:#afafaf;
+--mainTransition:all 0.3s linear;
+--mainSpacing: 0.2rem;
+--hoverColor:#1985ff;
+--borderFadedColor:#34393f
+}
+
+
+/* Global styles */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Code",monospace;
+  color:var(--mainWhite);
+  background: black;    
+  line-height: 1.5;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+/* img{
+    width: 100%;
+    display: block;
+} */
+
+h1,h2,h3 {
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 1.25rem;
+}
