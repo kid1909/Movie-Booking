@@ -1,25 +1,27 @@
 import mongoose from 'mongoose'
 
-const TicketSchema = new mongoose.Schema({
-  movie: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Movie',
-    required: true,
+const TicketSchema = new mongoose.Schema(
+  {
+    movieId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Movie',
+      required: true,
+    },
+    showtime: {
+      type: String,
+    },
+    selectSeats: {
+      type: Object,
+      required: true,
+    },
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
+    createAt: Date,
   },
-  showtime: {
-    type: Date,
-    required: true,
-  },
-  seatNumber: {
-    type: String,
-    required: true,
-  },
-  userId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User', // Assuming you have a User model
-    required: true,
-  },
-  // Add more fields as needed
-})
+  { timestamps: true }
+)
 
 export default mongoose.model('Ticket', TicketSchema)

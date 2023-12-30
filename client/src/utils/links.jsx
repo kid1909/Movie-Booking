@@ -6,24 +6,80 @@ import { CiUser } from 'react-icons/ci'
 const links = [
   {
     text: 'ticket',
-    path: 'ticket',
     icon: <IoTicketOutline />,
+    toggleBar: false,
   },
   {
     text: 'theaters',
-    path: 'theaters',
     icon: <CiLocationOn />,
+    toggleBar: false,
   },
   {
     text: 'search',
-    path: 'search',
     icon: <CiSearch />,
+    toggleBar: false,
   },
 
   {
-    text: 'profile',
-    path: 'profile',
+    text: 'account',
     icon: <CiUser />,
+    toggleBar: false,
+  },
+]
+export const movies = [
+  {
+    _id: 1,
+    title: 'Hunger Game',
+    releaseDate: '2023-07-16',
+    availableDate: ['2023-08-16', '2023-08-17'],
+    length: '135 minutes',
+    rating: 'PG13',
+    summary:
+      'The Hunger Games: The Ballad of Songbirds & Snakes follows a young Coriolanus (Tom Blyth) who is the last hope for his failing lineage, the one-proud Snow family that has fallen from grace in a post-war Capitol. With his livelihood threatened, Snow is reluctantly assigned to mentor Lucy Gray Baird (Rachel Zegler), a tribute from the impoverished District 12. But after Lucy Gray’s charm captivates the audience of Panem, Snow sees an opportunity to shift their fates. With everything he has worked for hanging in the balance, Snow unites with Lucy Gray to turn the odds in their favor. Battling his instincts for both good and evil, Snow sets out on a race against time to survive and reveal if he will ultimately become a songbird or a snake.',
+    genrer: 'Action, Adventure',
+    posterURL:
+      'https://res.cloudinary.com/domjuxgd5/image/upload/v1701985895/f207yqys6jtv0docigpl.webp',
+    new: 'true',
+    totalSeats: {
+      A: { A1: false, A2: false, A3: true, A4: true, A5: true },
+      B: { B1: true, B2: true, B3: true, B4: true, B5: true },
+      // ... Add more sections if needed
+    },
+  },
+  {
+    _id: 2,
+    title: 'Godzilla',
+    releaseDate: '2023-07-16',
+
+    length: '153 minutes',
+    rating: 'PG13',
+    summary:
+      'Japan, devastated after the war, faces a new threat in the form of Godzilla. How will the country confront this impossible situation?',
+    genrer: 'Action, Adventure,Drama',
+    posterURL:
+      'https://res.cloudinary.com/domjuxgd5/image/upload/v1701984052/godzilla_h6b4y8.webp',
+    new: 'true',
+    totalSeats: {
+      A: { A1: false, A2: true, A3: true, A4: true, A5: true },
+      B: { B1: true, B2: true, B3: true, B4: true, B5: true },
+      // ... Add more sections if needed
+    },
+  },
+  {
+    _id: 3,
+    title: 'Godzilla',
+    releaseDate: '2023-07-16',
+    availableDate: ['2023-08-16', '2023-08-17'],
+    length: '153 minutes',
+    rating: 'PG13',
+    summary:
+      'Japan, devastated after the war, faces a new threat in the form of Godzilla. How will the country confront this impossible situation?',
+    genrer: 'Action, Adventure,Drama',
+    posterURL:
+      'https://res.cloudinary.com/domjuxgd5/image/upload/v1701984052/godzilla_h6b4y8.webp',
+    new: 'true',
+    A: { A1: false, A2: true, A3: true, A4: true, A5: true },
+    B: { B1: true, B2: false, B3: false, B4: true, B5: true },
   },
 ]
 

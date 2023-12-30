@@ -47,7 +47,8 @@ const Wrapper = styled.section`
     font-size: 2rem;
     color: white;
     cursor: pointer;
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-left: 5px;
   }
   .close-btn:hover {
     color: var(--hoverColor);

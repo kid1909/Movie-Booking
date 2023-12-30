@@ -4,31 +4,36 @@ import Wrapper from '../assets/wrappers/Navbar'
 import { MdMenu } from 'react-icons/md'
 import Navlinks from './Navlinks'
 import BigSidebar from './BigSidebar'
-import { useLoadingContext } from '../Pages/Landing'
 import Smallbar from './Smallbar'
+import { useState, createContext, useContext } from 'react'
+import { Link } from 'react-router-dom'
+
+const NavbarContext = createContext()
 
 const Navbar = () => {
-const { showSidebar, toggleSidebar } = useLoadingContext()
+  const [showSidebar, setShowSidebar] = useState(false)
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar)
+  }
   return (
     <>
       <Wrapper>
-        <div className="nav-bar">
-          {/* {showSidebar ? (
+        <NavbarContext.Provider value={{ toggleSidebar, showSidebar }}>
+          <div className="nav-bar">
             <MdMenu className="small-menu" onClick={toggleSidebar} />
-          ) : (
-            <span className="material-symbols-outlined" onClick={toggleSidebar}>
-              close
-            </span>
-          )} */}
-          <MdMenu className="small-menu" onClick={toggleSidebar} />
-          <BigSidebar />
+            <BigSidebar />
+            <Link to="/">
+              {' '}
+              <Logo />
+            </Link>
 
-          <Logo />
-          <Navlinks />
-        </div>
-        <Smallbar />
+            <Navlinks />
+          </div>
+          <Smallbar />
+        </NavbarContext.Provider>
       </Wrapper>
     </>
   )
 }
+export const useNavbarContext = () => useContext(NavbarContext)
 export default Navbar

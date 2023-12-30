@@ -1,9 +1,9 @@
 import Wrapper from '../assets/wrappers/Smallbar'
 import PageNavLinks from './PageNavLinks'
-import { useLoadingContext } from '../Pages/Landing'
+import { useNavbarContext } from '../components/Navbar'
 
 const Smallbar = () => {
-      const { showSidebar, toggleSidebar } = useLoadingContext()
+  const { showSidebar, toggleSidebar } = useNavbarContext()
   return (
     <Wrapper>
       <div

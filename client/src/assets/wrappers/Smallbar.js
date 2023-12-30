@@ -17,7 +17,7 @@ const Wrapper = styled.section`
       padding-right: 20px;
     }
     .show-sidebar {
-      z-index: 99;
+      z-index: 10;
       opacity: 1;
       visibility: visible;
     }

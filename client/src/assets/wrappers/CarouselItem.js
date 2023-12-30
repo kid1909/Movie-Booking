@@ -9,7 +9,6 @@ const Wrapper = styled.section`
     justify-content: center;
     position: relative;
     /* height: 40vh; */
-
   }
   .inner {
     white-space: nowrap;
@@ -26,7 +25,6 @@ const Wrapper = styled.section`
     padding: 0 20px 0 20px;
     /* height: 40vh; */
     object-fit: contain;
- 
   }
   .carousel-buttons {
     display: flex;

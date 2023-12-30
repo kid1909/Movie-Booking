@@ -1,9 +1,15 @@
 import { Router } from "express";
-import { createMovie } from "../Controllers/movieController.js";
+import {
+  createMovie,
+  getMovieInfo,
+  getAllMovies,
+} from '../Controllers/movieController.js'
 
 const router = Router()
 
-router.post('/admin/createMovie',createMovie)
+router.post('/admin/createMovie', createMovie)
+router.get('/:id', getMovieInfo)
+router.get('/', getAllMovies)
 
 
 

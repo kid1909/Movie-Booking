@@ -8,7 +8,10 @@
 --mainTransition:all 0.3s linear;
 --mainSpacing: 0.2rem;
 --hoverColor:#1985ff;
---borderFadedColor:#34393f
+--borderFadedColor:#34393f;
+--buttonColor:#004CCC;
+--buttonHoverColor:#072d6e;
+  --transition: 0.3s ease-in-out all;
 }
 
 

@@ -1,25 +1,15 @@
-import Wrapper from "../assets/wrappers/Landing"
-import {Navbar,BigSidebar,Smallbar} from "../components"
-import { useState, createContext, useContext } from 'react'
-import Carousel from "../components/Carousel"
-
-const LoadingContext = createContext()
+import { Navbar } from '../components'
+import { useState } from 'react'
+import Carousel from '../components/Carousel'
+import ListMovies from '../components/ListMovies'
 
 const Landing = () => {
-
-    const [showSidebar, setShowSidebar] = useState(false)
-      const toggleSidebar = () => {
-        setShowSidebar(!showSidebar)
-      }
   return (
-    <LoadingContext.Provider value={{ toggleSidebar ,showSidebar}}>
-      <Wrapper>
-        <Navbar />    
-      </Wrapper>
-      <Carousel/>
-    </LoadingContext.Provider>
+    <>
+      <Carousel />
+      <ListMovies />
+    </>
   )
 }
 
-export const useLoadingContext = ()=> useContext(LoadingContext)
 export default Landing

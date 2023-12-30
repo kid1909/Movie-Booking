@@ -2,13 +2,14 @@ import styled from 'styled-components'
 
 const Wrapper = styled.section`
   * {
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
   }
 
   .navbar {
     display: flex;
     justify-content: space-around; /* Adjust as needed */
     padding: 20px; /* Adjust padding as needed */
+    /* text-transform: capitalize; */
   }
   img {
     width: 30px;
