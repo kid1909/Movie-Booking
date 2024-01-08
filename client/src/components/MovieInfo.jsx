@@ -5,7 +5,7 @@ import Confirm from './Confirm'
 import { FaTimes } from 'react-icons/fa'
 import customFetch from '../utils/customFetch'
 import { useLoaderData } from 'react-router-dom'
-import { useHomeLayoutContext } from '../Pages/HomeLayout'
+// import { useHomeLayoutContext } from '../Pages/HomeLayout'
 
 
 export const loader = async ({ params }) => {
@@ -47,15 +47,19 @@ const handleSeatClick = (section, seat) => {
     updatedTickets[section] = updatedTickets[section] || {}
 
     // Set the seat to false if it's not present or already true
-    updatedTickets[section][seat] = !updatedTickets[section]?.[seat]
+    updatedTickets[section][seat] = !updatedTickets[section][seat]
 
     // If the seat is true, toggle it to false
-    if (updatedTickets[section][seat]) {
-      updatedTickets[section][seat] = false
-    }
+    // if (updatedTickets[section][seat]) {
+    //   updatedTickets[section][seat] = false
+    // }
+    //   if (!updatedTickets[section][seat]) {
+    //     updatedTickets[section][seat] = true
+    //   }
 
     // Log the updated state
     console.log('Updated Tickets:', updatedTickets)
+    console.log('select Seats', selectSeats)
 
     // Return the updated state
     return updatedTickets

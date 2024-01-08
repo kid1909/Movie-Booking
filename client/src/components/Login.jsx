@@ -5,6 +5,7 @@ import customFetch from '../utils/customFetch'
 import { toast } from 'react-toastify'
 import { Form } from 'react-router-dom'
 import { useHomeLayoutContext } from '../Pages/HomeLayout'
+import { Link } from 'react-router-dom'
 // import { log } from 'console'
 // import { Profile } from '../components'
 
@@ -44,7 +45,10 @@ const Login = () => {
         {user.name ? (
           <div className="container show-sidebar">
             <FaTimes className="close-btn" onClick={toggleSidebar} />
-            Hello User
+            Hello {user.name}
+            <Link to="/tickets" onClick={toggleSidebar}>
+              Tickets
+            </Link>
             <button type="submit" onClick={handleLogout}>
               Logout
             </button>

@@ -12,7 +12,7 @@ import {
 import { loader as movieLoader } from './components/ListMovies'
 import { loader as singleMovieLoader } from './components/MovieInfo'
 import { loader as homeLayoutUserLoader } from './Pages/HomeLayout'
-// import { loader as ticketLoader } from './Pages/Ticket'
+import { loader as ticketLoader } from './Pages/Ticket'
 import { action as loginAction } from './components/Login'
 // import LoginPage from './Pages/LoginPage'
 
@@ -36,14 +36,12 @@ const router = createBrowserRouter([
         path: '/tickets',
         element: <Ticket />,
         errorElement: <ErrorPage />,
-      },
-      {
-        path: '/login',
-        element: <LoginPage />,
+        loader: ticketLoader,
       },
       {
         path: '/register',
         element: <Register />,
+        errorElement: <ErrorPage />,
       },
     ],
   },

@@ -45,8 +45,11 @@ const Confirm = ({
       const response = await customFetch.post(`/tickets/${_id}`, confirmData)
       // const savedTicket = response.data
       // const confirmSeat = await customFetch.get(`/ticket/${_id}`)
+  
       toast.success('Tickets confirmed')
-
+      setTimeout(() => {
+        window.location = '/tickets'
+      }, 1000)
       // toggleSidebar()
     } catch (error) {
       // Handle errors

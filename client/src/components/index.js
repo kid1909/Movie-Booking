@@ -10,6 +10,7 @@ export { default as Ticket } from '../Pages/Ticket'
 export { default as Theaters } from './Theaters'
 export { default as Login } from './Login'
 export { default as Confirm } from './Confirm'
+export { default as TicketContainer } from './TicketContainer'
 
 
 
